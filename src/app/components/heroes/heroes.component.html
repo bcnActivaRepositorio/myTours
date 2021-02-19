@@ -1,0 +1,29 @@
+
+
+<!--Simple binding-->
+<!-- <div><span>id:</span>{{ hero.id }}</div>
+<div><span>name:</span> {{ hero.name |uppercase }}</div> -->
+
+<!--ngmodel two way binding-->
+<!-- <div><span>id:</span>{{ hero.id }}</div>
+<div>
+  <label class="text-capitalize">name</label>
+  <input [(ngModel)]="hero.name" type="text" placeholder="Name">
+</div> -->
+<!--Is not persistant yet-->
+
+<!----------------------Now this task will be taken by details component---------------------------------------------------->
+<!-- <div *ngIf="selectedHero">
+<h2>{{selectedHero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{selectedHero.id}}</div>
+
+</div> -->
+<!-------------------------------------------------------------------------------------------->
+<!--ngFor iterates throug arr of objects to display and repeat all the list-->
+<!--ngIf removed as details components show us the details-->
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{ hero.id }}" ><span class="badge">{{hero.id}}</span> {{hero.name}}</a>
+  </li>
+</ul>
+
